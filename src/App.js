@@ -1,10 +1,10 @@
+import Cadastrar from "./pages/Cadastrar";
 
-import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1>Inicio Desafio</h1>
+      <Cadastrar />
     </div>
   );
 }
