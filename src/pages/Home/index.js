@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import './style.css';
 import logo from '../../assets/logo.svg';
 import avatar from '../../assets/avatar.svg';
@@ -15,7 +16,10 @@ function Home() {
                 <div className='container_menu'>
                     <img src={avatar} alt='logo' />
                     <h3 className='menu_nome'>Usuário</h3>
-                    <img src={sair} alt='logout' />
+
+                    <Link to={'/login'} className='btn-logout'>
+                        <img src={sair} alt='logout' />
+                    </Link>
                 </div>
             </header>
 
@@ -34,8 +38,6 @@ function Home() {
                         <p className='item_valor'>Valor</p>
                         <span className='icons'></span>
                     </div>
-
-
 
                     <div className='container_resumo'>
                         <div className='content_resumo'>
