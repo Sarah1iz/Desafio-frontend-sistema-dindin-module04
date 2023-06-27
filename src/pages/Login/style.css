@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 .container-content {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-
-    margin-top: 100px;
 
     padding: 108px 122px 0px 100px;
 }
@@ -60,7 +62,7 @@
 }
 
 .form-login h3 {
-    font-family: Rubik, 'sans-serif';
+    font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 51px;
