@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import logo from "../../assets/Logo.png";
 import "./style.css";
 
@@ -46,7 +47,9 @@ function Cadastrar() {
                             </div>
 
                             <button className="btn-purple">Cadastrar</button>
-                            <span>Já tem cadastro? Clique aqui!</span>
+                            <Link to={'/login'} className='link-login'>
+                                Já tem cadastro? Clique aqui!
+                            </Link>
 
                             {/* colocar span de erro aqui */}
                         </form>

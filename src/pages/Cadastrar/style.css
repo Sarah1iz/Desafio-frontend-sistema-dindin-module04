@@ -59,9 +59,10 @@
     margin-top: 7px;
 }
 
-.form-cadastro span {
-    margin-top: 12px;
+.link-login {
+    padding-top: 12px;
 
+    text-decoration: none;
     font-family: Lato, 'sans-serif';
     font-weight: 700;
     font-size: 14px;
