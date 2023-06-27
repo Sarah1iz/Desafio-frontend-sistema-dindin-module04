@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "../../assets/Logo.png";
+import logo from "../../assets/logo.svg";
 import "./style.css";
 
 
@@ -9,7 +9,7 @@ function Login() {
         <>
             <div className="container-main">
                 <div className="content-main">
-                    <img src={logo} alt="logo" />
+                    <img src={logo} alt="logo" className='logo-dindin' />
 
                     <div className="container-content">
                         <div className="container-left">
