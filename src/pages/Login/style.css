@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+* {
+    font-family: 'Rubik', sans-serif;
+}
 
 .container-content {
     display: flex;
@@ -62,9 +65,9 @@
 }
 
 .form-login h3 {
-    font-family: 'Rubik', sans-serif;
+
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 51px;
 
     color: #7978d9;
@@ -76,6 +79,8 @@
     align-items: flex-start;
 
     width: 100%;
+
+
 }
 
 .form-login label {
@@ -94,6 +99,8 @@
 
     font-size: 20px;
     line-height: 32px;
+
+    color: #555555;
 }
 
 .btn-login {

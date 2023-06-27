@@ -12,7 +12,7 @@
 
     width: 513px;
     height: 781px;
-    margin-top: 63px;
+    margin-top: 62px;
     padding: 60px 32px;
 
     background-color: #fff;
@@ -22,7 +22,7 @@
     padding-bottom: 42px;
 
     font-size: 28px;
-    font-weight: 700;
+    font-weight: 500;
 
     color: #7978d9;
 }
@@ -52,6 +52,8 @@
 
     font-size: 20px;
     line-height: 32px;
+
+    color: #555555;
 }
 
 .form-cadastro button {
