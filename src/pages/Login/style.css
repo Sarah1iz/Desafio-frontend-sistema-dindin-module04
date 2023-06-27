@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
 
 
-* {
-    font-family: 'Rubik', sans-serif;
-}
-
 .container-content {
     display: flex;
     flex-direction: row;
@@ -19,6 +15,8 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
+    font-family: 'Rubik', sans-serif;
 
     max-width: 614px;
 }
@@ -60,15 +58,17 @@
     min-width: 380px;
     padding: 60px 32px;
 
+    font-family: 'Rubik', sans-serif;
 
     background-color: #fff;
 }
 
 .form-login h3 {
-
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 51px;
+
+
 
     color: #7978d9;
 }
