@@ -1,6 +1,7 @@
-import { Link, useNavigate } from 'react-router-dom';
-import logo from "../../assets/logo.svg";
 import "./style.css";
+import logo from "../../assets/logo.svg";
+import Form from "../../components/formLogin";
+import { Link } from 'react-router-dom';
 
 
 function Login() {
@@ -27,32 +28,7 @@ function Login() {
 
                         </div>
 
-                        <form className="form-login">
-                            <h3>Login</h3>
-
-                            <div className="div-input">
-                                <label htmlFor="email">E-mail</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-
-                                />
-                            </div>
-
-                            <div className="div-input">
-                                <label htmlFor="senha" >Password</label>
-                                <input
-                                    type="password"
-                                    name="senha"
-                                    id="senha"
-
-                                />
-                            </div>
-
-
-                            <button type="submit" className="btn-purple btn-login">Entrar</button>
-                        </form>
+                        <Form />
 
                     </div>
                 </div>

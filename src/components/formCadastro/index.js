@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { cadastroUsuario } from '../../utils/functionsCad';
+//import { cadastroUsuario } from '../../utils/functionsCad';
 
 function FormCadastro() {
     const [form, setForm] = useState({
@@ -51,7 +51,7 @@ function FormCadastro() {
             email: form.email,
             senha: form.senha,
         };
-        await cadastroUsuario(setTextFeedback, navigate, data);
+        // await cadastroUsuario(setTextFeedback, navigate, data);
     };
 
     return (
