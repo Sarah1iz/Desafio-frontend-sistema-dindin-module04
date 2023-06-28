@@ -1,5 +1,5 @@
-import api from "../services/api";
-
+import api from "../service/api";
+import { getItem } from "./functionsLogin";
 
 export async function getTransacao(setTransacao, setResumo) {
     try {
@@ -77,14 +77,14 @@ export async function getCategorias(setCategorias) {
 }
 
 
-export async function atualizarResumo(setTransacaoResumo) {
+export async function atualizarResumo(setValorResumo) {
     try {
         const response = await api.get("/transacao/extrato", {
             headers: {
                 Authorization: `Bearer ${getItem("token")}`,
             },
         });
-        setTransacaoResumo({
+        setValorResumo({
             entrada: response.data.entrada,
             saida: response.data.saida,
             saldo: response.data.entrada - response.data.saida,

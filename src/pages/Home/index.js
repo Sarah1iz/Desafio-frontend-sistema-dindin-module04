@@ -1,15 +1,28 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useState } from "react";
 import './style.css';
 //import Filtro from '../../components/Filtro';
-// import Tabela from '../../components/Tabela';
-// import Resumo from '../../components/Resumo';
+import CabecalhoTabela from '../../components/CabecalhoTabela';
+import Resumo from '../../components/Resumo';
 import logo from '../../assets/logo.svg';
 import avatar from '../../assets/avatar.svg';
 import sair from '../../assets/logout.svg';
 
-//utilizar useState para abrir e fechar o modal
+//import { getTransacao } from '../../utils/functionsDash';
 
 function Home() {
+    const [modalState, setModalState] = useState(false)
+
+    const [valorResumo, setValorResumo] = useState({
+        entrada: 0,
+        saida: 0,
+        saldo: 0,
+    });
+
+    function handleModal(transacoes) {
+        setModalState(false);
+    }
+
     return (
         <>
             <header>
@@ -28,8 +41,12 @@ function Home() {
             <main className='container_principal'>
                 {/* <Filtro /> */}
                 <div className='dashboard'>
-                    {/* <Tabela />
-                    <Resumo /> */}
+                    <CabecalhoTabela />
+                    <Resumo
+                        stateModal={handleModal}
+                        valorResumo={valorResumo}
+
+                    />
                 </div>
 
             </main>
