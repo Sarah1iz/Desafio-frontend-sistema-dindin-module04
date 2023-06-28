@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-//import { loginUser } from "../../utils/functionsLogin";
+import { useNavigate } from "react-router-dom";
+import { loginUsuario } from "../../utils/functionsLogin";
 
 
 function FormLogin() {
@@ -23,20 +23,16 @@ function FormLogin() {
         e.preventDefault();
         if (!form.email || !form.senha) {
             setTextFeedback("Informe todos os campos solicitados");
-            setInterval(() => {
-                setTextFeedback("");
-            }, 2000);
+
             return;
         }
 
         if (!form.email.includes("@")) {
             setTextFeedback("Informe um email válido");
-            setInterval(() => {
-                setTextFeedback("");
-            }, 2000);
+
             return;
         }
-        //await loginUsuario(navigate, form);
+        await loginUsuario(navigate, form);
     };
 
 

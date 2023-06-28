@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-//import { cadastroUsuario } from '../../utils/functionsCad';
+import { cadastroUsuario } from '../../utils/functionsCad';
 
 function FormCadastro() {
     const [form, setForm] = useState({
@@ -24,25 +24,19 @@ function FormCadastro() {
         e.preventDefault();
         if (!(form.name || form.email || form.senha || form.verificarsenha)) {
             setTextFeedback("Todos os campos devem ser preenchidos");
-            setInterval(() => {
-                setTextFeedback("");
-            }, 2000);
+
             return;
         }
 
         if (!form.email.includes("@")) {
             setTextFeedback("Informe um email válido");
-            setInterval(() => {
-                setTextFeedback("");
-            }, 2000);
+
             return;
         }
 
         if (form.senha !== form.verificarsenha) {
             setTextFeedback("Senhas não conferem");
-            setInterval(() => {
-                setTextFeedback("");
-            }, 2000);
+
             return;
         }
 
@@ -51,7 +45,7 @@ function FormCadastro() {
             email: form.email,
             senha: form.senha,
         };
-        // await cadastroUsuario(setTextFeedback, navigate, data);
+        await cadastroUsuario(setTextFeedback, navigate, data);
     };
 
     return (
