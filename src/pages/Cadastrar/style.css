@@ -1,80 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-
-.container-cadastro {
-    display: flex;
-    justify-content: center;
-}
-
-.form-cadastro {
+.container-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
+    min-height: 100vh;
 
-    width: 513px;
-    height: 781px;
-    margin-top: 62px;
-    padding: 60px 32px;
-
-    background-color: #fff;
+    background-image: url("../../assets/background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.form-cadastro h3 {
-    padding-bottom: 42px;
 
-    font-size: 28px;
-    font-weight: 500;
-
-    font-family: 'Rubik', sans-serif;
-
-    color: #7978d9;
-}
-
-.div-input {
+.header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    padding-bottom: 31px;
-    width: 100%;
-}
-
-.form-cadastro label {
-    display: flex;
-    align-items: flex-start;
-
-    padding-bottom: 8px;
-
-    font-family: 'Rubik', sans-serif;
-    font-size: 18px;
-
-    color: #484848;
-}
-
-.form-cadastro input {
-    width: 100%;
-    height: 63px;
-    padding: 12px 8px;
-
-    font-size: 20px;
-    line-height: 32px;
-
-    color: #555555;
-}
-
-.form-cadastro button {
-    width: 100%;
-    height: 48px;
-    margin-top: 7px;
-
-    font-family: 'Rubik', sans-serif;
-}
-
-.link-login {
-    padding-top: 12px;
-
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
+    font-size: 36px;
     font-weight: 700;
-    font-size: 14px;
-    color: #7B61FF;
+    line-height: 43px;
+    color: white;
+
+    margin-left: 100px;
+    margin-top: 41px;
+}
+
+.logo-dindin {
+    padding-left: 50px;
+    padding-top: 41px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-top: 80px;
+    width: 100%;
 }

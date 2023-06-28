@@ -2,39 +2,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
+
 * {
     margin: 0;
-    padding: 0;
+    border: 0;
     box-sizing: border-box;
 }
 
 button {
     cursor: pointer;
-    border: 0;
-    outline: 0;
 }
 
-.container-main {
-    display: flex;
-
-    width: 100%;
-    min-height: 100vh;
-
-    background-image: url("./assets/background1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.logo-dindin {
-    padding-left: 50px;
-    padding-top: 41px;
-}
-
-.content-main {
-    margin: 0 auto;
-    width: 100%;
-    min-width: 1440px;
+input {
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #fff;
 }
 
 .btn-purple {
@@ -47,10 +29,4 @@ button {
 
     cursor: pointer;
     border: 0;
-}
-
-input {
-    border: 1px solid #555;
-    border-radius: 5px;
-    background: #fff;
 }

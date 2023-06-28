@@ -1,8 +1,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import './style.css';
-import Filtro from '../../components/Filtro';
-import Tabela from '../../components/Tabela';
-import Resumo from '../../components/Resumo';
+//import Filtro from '../../components/Filtro';
+// import Tabela from '../../components/Tabela';
+// import Resumo from '../../components/Resumo';
 import logo from '../../assets/logo.svg';
 import avatar from '../../assets/avatar.svg';
 import sair from '../../assets/logout.svg';
@@ -26,10 +26,10 @@ function Home() {
             </header>
 
             <main className='container_principal'>
-                <Filtro />
+                {/* <Filtro /> */}
                 <div className='dashboard'>
-                    <Tabela />
-                    <Resumo />
+                    {/* <Tabela />
+                    <Resumo /> */}
                 </div>
 
             </main>
