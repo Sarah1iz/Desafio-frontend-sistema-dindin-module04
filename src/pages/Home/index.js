@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 import './style.css';
-//import Filtro from '../../components/Filtro';
+import Filtro from '../../components/Filtro';
 import CabecalhoTabela from '../../components/CabecalhoTabela';
 import Resumo from '../../components/Resumo';
 import logo from '../../assets/logo.svg';
@@ -39,7 +39,7 @@ function Home() {
             </header>
 
             <main className='container_principal'>
-                {/* <Filtro /> */}
+                <Filtro />
                 <div className='dashboard'>
                     <CabecalhoTabela />
                     <Resumo
