@@ -8,9 +8,7 @@ function ItemTabela({
     descricao,
     categoria,
     valor,
-    tipoTransacao,
-    editar,
-    excluir,
+    tipoTransacao
 }) {
 
     const dataRegistro = new Date(data).toLocaleDateString(undefined, { day: 'numeric', month: 'numeric', year: 'numeric' });
@@ -28,8 +26,8 @@ function ItemTabela({
                 <p className={`coluna_valor ${tipoTransacao}`}>R$<span>{(valor / 100).toFixed(2)}</span></p>
 
                 <div className='coluna_funcs'>
-                    <img src={editarIcon} alt='editar' onClick={editar} />
-                    <img src={deletarIcon} alt='excluir' onClick={excluir} />
+                    <img src={editarIcon} alt='editar' />
+                    <img src={deletarIcon} alt='excluir' />
                 </div>
             </div>
 
