@@ -1,7 +1,7 @@
 import api from "../service/api";
 import { getItem } from "./functionsLogin";
 
-export async function getTransacao(setTransacao, setResumo) {
+export async function getRegistro(setRegistro, setResumo) {
     try {
         const response = await api.get("/transacao", {
             headers: {
@@ -10,7 +10,7 @@ export async function getTransacao(setTransacao, setResumo) {
         });
         await atualizarResumo(setResumo);
 
-        return setTransacao(response.data);
+        return setRegistro(response.data);
     } catch (error) {
         alert(error.response.data.mensagem);
     }
@@ -18,14 +18,14 @@ export async function getTransacao(setTransacao, setResumo) {
 
 
 
-export async function deleteTransacao(id, setTransacao, setResumo) {
+export async function deleteRegistro(id, setRegistro, setResumo) {
     try {
         await api.delete(`/transacao/${id}`, {
             headers: {
                 Authorization: `Bearer ${getItem("token")}`,
             },
         });
-        await getTransacao(setTransacao, setResumo);
+        await getRegistro(setRegistro, setResumo);
     } catch (error) {
         alert(error.response.data.mensagem);
     }
@@ -33,14 +33,14 @@ export async function deleteTransacao(id, setTransacao, setResumo) {
 
 
 
-export async function postTransacao(data, setTransacao, setResumo) {
+export async function postRegistro(data, setRegistro, setResumo) {
     try {
         await api.post("/transacao", data, {
             headers: {
                 Authorization: `Bearer ${getItem("token")}`,
             },
         });
-        await getTransacao(setTransacao, setResumo);
+        await getRegistro(setRegistro, setResumo);
     } catch (error) {
         alert(error.response.data.mensagem);
     }
@@ -48,14 +48,14 @@ export async function postTransacao(data, setTransacao, setResumo) {
 
 
 
-export async function putTransacao(data, setTransacao, current, setResumo) {
+export async function putRegistro(data, setRegistro, current, setResumo) {
     try {
         await api.put(`/transacao/${current}`, data, {
             headers: {
                 Authorization: `Bearer ${getItem("token")}`,
             },
         });
-        await getTransacao(setTransacao, setResumo);
+        await getRegistro(setRegistro, setResumo);
     } catch (error) {
         return alert(error.response.data.mensagem);
     }
