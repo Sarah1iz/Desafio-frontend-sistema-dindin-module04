@@ -1,0 +1,51 @@
+.item_tabela {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+
+    width: 964px;
+    height: 60px;
+    border-bottom: 1px solid #E0E0E0;
+
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.coluna_data {
+    width: 102px;
+}
+
+.coluna_dia {
+    width: 78px;
+}
+
+.coluna_descricao {
+    width: 170px;
+}
+
+.coluna_categoria {
+    width: 105px;
+}
+
+.coluna_valor {
+    width: 84px;
+    font-weight: 700;
+}
+
+.coluna_funcs {
+    display: flex;
+    gap: 12px;
+}
+
+.entrada {
+    color: #7978D9;
+
+}
+
+.saida {
+    color: #FA8C10;
+}
