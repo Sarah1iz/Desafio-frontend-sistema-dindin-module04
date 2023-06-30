@@ -98,7 +98,7 @@ function FormCadastro() {
                         />
                     </div>
 
-                    <button className="btn-purple">Cadastrar</button>
+                    <button className="btn-purple btn-cadastro">Cadastrar</button>
                     <Link to={'/login'} className='link-login'>
                         Já tem cadastro? Clique aqui!
                     </Link>
