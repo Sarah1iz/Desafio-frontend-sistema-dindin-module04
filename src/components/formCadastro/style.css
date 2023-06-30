@@ -19,7 +19,7 @@
 }
 
 .form-cadastro h3 {
-    padding-bottom: 42px;
+    margin-top: 61px;
 
     font-size: 28px;
     font-weight: 500;
@@ -61,7 +61,7 @@
     color: #555555;
 }
 
-.form-cadastro button {
+.btn-cadastro {
     width: 100%;
     height: 48px;
     margin-top: 7px;
