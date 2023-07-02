@@ -1,7 +1,8 @@
 import './style.css';
 import Item from '../ItemTabela';
+import { deleteRegistro } from '../../utils/functionsDash';
 
-function Tabela({ registro }) {
+function Tabela({ registro, getRegistro, atualizarResumo, setRegistro, setRegistroResumo, corButton, setCorButton }) {
 
     return (
         <div className='container_painel'>
@@ -24,6 +25,12 @@ function Tabela({ registro }) {
                         valor={item.valor}
                         data={item.data}
                         categoria={item.categoria_nome}
+                        categoria_id={item.categoria_id}
+                        setRegistro={setRegistro}
+                        setRegistroResumo={setRegistroResumo}
+                        corButton={corButton}
+                        setCorButton={setCorButton}
+                        excluir={() => deleteRegistro(item.id, getRegistro, atualizarResumo)}
                     />
                 );
 

@@ -26,16 +26,14 @@ export async function loginUsuario(navigate, form) {
 
 
 export async function getUsuario(setUsuario) {
-    try {
-        const response = await api.get("/usuario", {
-            headers: {
-                Authorization: `Bearer ${getItem("token")}`,
-            },
-        });
-        setUsuario(response.data.nome);
-    } catch (error) {
-        alert(error.response.data.mensagem);
-    }
+
+    const response = await api.get("/usuario", {
+        headers: {
+            Authorization: `Bearer ${getItem("token")}`,
+        },
+    });
+    setUsuario(response.data.nome);
+
 }
 
 

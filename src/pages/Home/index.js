@@ -84,7 +84,11 @@ function Home() {
                 <Filtro />
                 <div className='dashboard'>
                     <Tabela
+                        setRegistro={setRegistro}
                         registro={registro}
+                        setRegistroResumo={setRegistroResumo}
+                        setCorButton={setCorButton}
+                        corButton={corButton}
                     />
                     <Resumo
                         stateModal={handleModal}
