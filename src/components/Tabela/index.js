@@ -1,7 +1,7 @@
 import './style.css';
 import Item from '../ItemTabela';
 
-function Tabela({ registro }) {
+function Tabela({ registro, setRegistro, setRegistroResumo, corButton, setCorButton }) {
 
     return (
         <div className='container_painel'>
@@ -24,6 +24,11 @@ function Tabela({ registro }) {
                         valor={item.valor}
                         data={item.data}
                         categoria={item.categoria_nome}
+                        categoria_id={item.categoria_id}
+                        setRegistro={setRegistro}
+                        setRegistroResumo={setRegistroResumo}
+                        corButton={corButton}
+                        setCorButton={setCorButton}
                     />
                 );
 

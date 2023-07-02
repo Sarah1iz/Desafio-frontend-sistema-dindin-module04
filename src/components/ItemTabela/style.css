@@ -49,3 +49,12 @@
 .saida {
     color: #FA8C10;
 }
+
+.btn-editar {
+    border-bottom: none;
+    background-color: white;
+}
+
+.btn-deletar {
+    background-color: white;
+}
