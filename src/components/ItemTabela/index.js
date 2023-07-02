@@ -17,7 +17,8 @@ function ItemTabela({
     setRegistro,
     setRegistroResumo,
     corButton,
-    setCorButton
+    setCorButton,
+    current
 }) {
 
     const dataRegistro = new Date(data).toLocaleDateString(undefined, { day: 'numeric', month: 'numeric', year: 'numeric' });
@@ -43,7 +44,7 @@ function ItemTabela({
             } else {
                 setCorButton(false)
             }
-            const date = format(new Date(data), "yyyy-MM-dd");
+            const date = format(new Date(data).setHours(+24), "yyyy-MM-dd");
             setForm({
                 tipo: tipoTransacao,
                 descricao: descricao,
@@ -83,11 +84,12 @@ function ItemTabela({
                 form={form}
                 setForm={setForm}
                 setRegistro={setRegistro}
-                current={true}
+                current={keyTransacao}
                 setRegistroResumo={setRegistroResumo}
                 setCorButton={setCorButton}
                 corButton={corButton}
             />
+
         </>
     );
 }
