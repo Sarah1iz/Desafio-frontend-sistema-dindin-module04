@@ -4,11 +4,9 @@ import Tabela from '../../components/Tabela';
 import Resumo from '../../components/Resumo';
 import Cabecalho from "../../components/Cabecalho";
 import Modal from "../../components/Modal";
-
 import { format } from "date-fns";
 import { useEffect, useState } from "react";
 import { getRegistro } from "../../utils/functionsDash";
-
 
 function Home() {
     const [registro, setRegistro] = useState([]);
@@ -24,7 +22,6 @@ function Home() {
         descricao: "",
     });
 
-
     const [valorResumo, setRegistroResumo] = useState({
         entrada: 0,
         saida: 0,
@@ -33,7 +30,6 @@ function Home() {
 
     useEffect(() => {
         getRegistro(setRegistro, setRegistroResumo);
-
     }, []);
 
     function handleModal(registro) {
@@ -47,21 +43,20 @@ function Home() {
                 const valor = registro.valor;
                 setForm({ ...registro, data, valor });
                 setCurrent(registro.id);
-
-                return;
+            } else {
+                setCurrent(null);
+                setForm({
+                    tipo: "saida",
+                    descricao: "",
+                    valor: "",
+                    data: "",
+                    categoria_id: "",
+                });
             }
-            setCurrent(null);
-            setForm({
-                tipo: "saida",
-                descricao: "",
-                valor: "",
-                data: "",
-                categoria_id: "",
-            });
-            return;
+        } else {
+            setModalState(false);
+            setCorButton(false);
         }
-        setModalState(false);
-        setCorButton(false);
     }
 
     return (
@@ -95,10 +90,9 @@ function Home() {
                         valorResumo={valorResumo}
                     />
                 </div>
-
             </main>
         </>
     );
 }
 
-export default Home;
+export default Home; 

@@ -17,7 +17,6 @@ export async function getRegistro(setRegistro, setResumo) {
 }
 
 
-
 export async function deleteRegistro(id, setRegistro, setResumo) {
     try {
         await api.delete(`/transacao/${id}`, {

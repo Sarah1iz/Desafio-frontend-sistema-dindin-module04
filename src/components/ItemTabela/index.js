@@ -5,7 +5,6 @@ import Modal from '../Modal';
 import { useState } from 'react';
 import { format } from "date-fns";
 
-
 function ItemTabela({
     keyTransacao,
     data,
@@ -20,11 +19,9 @@ function ItemTabela({
     setCorButton,
     excluir,
 }) {
-
     const dataRegistro = new Date(data).toLocaleDateString(undefined, { day: 'numeric', month: 'numeric', year: 'numeric', timeZone: 'UTC' });
     const diaSemana = new Date(data).getDay();
     const semana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
-
 
     const [modalState, setModalState] = useState(false);
 
@@ -37,14 +34,9 @@ function ItemTabela({
     });
 
     function handleModal() {
-
         if (!modalState) {
             setModalState(true);
-            if (tipoTransacao === 'entrada') {
-                setCorButton(true)
-            } else {
-                setCorButton(false)
-            }
+            setCorButton(tipoTransacao === 'entrada');
             const date = format(new Date(data).setHours(+24), "yyyy-MM-dd");
             setForm({
                 tipo: tipoTransacao,
@@ -53,11 +45,10 @@ function ItemTabela({
                 data: date,
                 categoria_id: categoria_id,
             });
-            return;
+        } else {
+            setModalState(false);
         }
-        setModalState(false);
     }
-
 
     return (
         <>
@@ -78,7 +69,6 @@ function ItemTabela({
                 </div>
             </div>
 
-
             <Modal
                 state={modalState}
                 handleModal={handleModal}
@@ -90,7 +80,6 @@ function ItemTabela({
                 setCorButton={setCorButton}
                 corButton={corButton}
             />
-
         </>
     );
 }
