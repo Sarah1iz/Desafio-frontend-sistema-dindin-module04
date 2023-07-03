@@ -22,16 +22,11 @@
     margin-top: 41px;
 }
 
-.logo-dindin {
-    padding-left: 50px;
-    padding-top: 41px;
-}
 
 .form {
     display: flex;
     flex-direction: row;
     justify-content: center;
 
-    margin-top: 80px;
     width: 100%;
 }

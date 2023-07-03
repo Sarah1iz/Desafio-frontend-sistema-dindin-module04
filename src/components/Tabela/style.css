@@ -17,11 +17,12 @@
 
 
 .item_data {
-    width: 80px;
+    width: 60px;
 }
 
 .item_dia {
     width: 105px;
+    margin-left: 20px;
 }
 
 .item_descricao {
@@ -35,7 +36,7 @@
 
 .item_valor {
     width: 85px;
-    margin-right: 40px;
+    margin-right: 65px;
 }
 
 .item_data,

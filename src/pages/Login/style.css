@@ -10,6 +10,11 @@
     padding: 108px 122px 0px 100px;
 }
 
+.logo-dindin {
+    margin-left: 100px;
+    margin-top: 41px;
+}
+
 .container-left {
     display: flex;
     flex-direction: column;
