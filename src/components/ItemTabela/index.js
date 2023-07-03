@@ -21,9 +21,9 @@ function ItemTabela({
     excluir,
 }) {
 
-    const dataRegistro = new Date(data).toLocaleDateString(undefined, { day: 'numeric', month: 'numeric', year: 'numeric' });
+    const dataRegistro = new Date(data).toLocaleDateString(undefined, { day: 'numeric', month: 'numeric', year: 'numeric', timeZone: 'UTC' });
     const diaSemana = new Date(data).getDay();
-    const semana = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+    const semana = ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'];
 
 
     const [modalState, setModalState] = useState(false);
