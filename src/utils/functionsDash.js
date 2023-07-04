@@ -43,7 +43,7 @@ export async function postRegistro(data, setRegistro, setResumo) {
         });
         await getRegistro(setRegistro, setResumo);
     } catch (error) {
-
+        alert(error.response.data.mensagem);
 
     }
 }
